@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Binus EzyFoods</string>
+    <string name="home_drinks">Drinks</string>
+    <string name="home_snacks">Snacks</string>
+    <string name="home_foods">Foods</string>
+    <string name="order">Order</string>
+    <string name="top_up">Top Up</string>
+    <string name="home_name">By Jokris</string>
+    <string name="menu">Menu</string>
+</resources>
