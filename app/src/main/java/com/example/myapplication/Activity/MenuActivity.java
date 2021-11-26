@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
 
@@ -27,7 +25,7 @@ public class MenuActivity extends AppCompatActivity {
         imgMilk = findViewById(R.id.img_menu_milk);
         imgWater = findViewById(R.id.img_menu_water);
         imgMangoJuice = findViewById(R.id.img_menu_mango);
-        btnCart = findViewById(R.id.btn_cart);
+        btnCart = findViewById(R.id.btn_myorder_home);
         cart = getIntent().getParcelableArrayListExtra("CART");
         Log.d("INIT_MENU_CART_ORDER", String.valueOf(cart.size()));
     }

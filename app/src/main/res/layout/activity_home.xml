@@ -155,14 +155,14 @@
         android:text="@string/home_notes"
         android:textColor="@color/black"
         android:textSize="6pt"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cart"
+        app:layout_constraintBottom_toTopOf="@+id/btn_myorder_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/btn_cart"
+        android:id="@+id/btn_myorder_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_order"

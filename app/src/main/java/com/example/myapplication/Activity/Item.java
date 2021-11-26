@@ -1,14 +1,14 @@
 package com.example.myapplication.Activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.ImageView;
 
 public class Item implements Parcelable {
     protected String ItemName;
     protected Integer ItemPrice;
     protected Integer ItemQty;
-    protected ImageView ItemImage;
+    protected Integer ItemImageId;
 
     public Item() {
     }
@@ -18,11 +18,9 @@ public class Item implements Parcelable {
         ItemQty = itemQty;
     }
 
-
     public String getItemName() {
         return ItemName;
     }
-
 
     public void setItemName(String itemName) {
         ItemName = itemName;
@@ -44,12 +42,12 @@ public class Item implements Parcelable {
         ItemQty = itemQty;
     }
 
-    public ImageView getItemImage() {
-        return ItemImage;
+    public Integer getItemImageId() {
+        return ItemImageId;
     }
 
-    public void setItemImage(ImageView itemImage) {
-        ItemImage = itemImage;
+    public void setItemImageId(Integer itemImageId) {
+        ItemImageId = itemImageId;
     }
 
     protected Item(Parcel in) {
@@ -63,6 +61,11 @@ public class Item implements Parcelable {
             ItemQty = null;
         } else {
             ItemQty = in.readInt();
+        }
+        if (in.readByte() == 0) {
+            ItemImageId = null;
+        } else {
+            ItemImageId = in.readInt();
         }
     }
 
@@ -97,6 +100,12 @@ public class Item implements Parcelable {
         } else {
             parcel.writeByte((byte) 1);
             parcel.writeInt(ItemQty);
+        }
+        if (ItemImageId == null) {
+            parcel.writeByte((byte) 0);
+        } else {
+            parcel.writeByte((byte) 1);
+            parcel.writeInt(ItemImageId);
         }
     }
 }

@@ -5,13 +5,11 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.navigation.ui.AppBarConfiguration;
 
@@ -84,30 +82,29 @@ public class OrderActivity extends AppCompatActivity {
                 order.setItemName("Premium Tea");
                 order.setItemPrice(100000);
                 order.setItemQty(qty);
+                order.setItemImageId(R.drawable.drink_tea);
                 break;
             case 2 :
                 order.setItemName("Milkshake");
                 order.setItemPrice(50000);
                 order.setItemQty(qty);
+                order.setItemImageId(R.drawable.drink_milk);
                 break;
             case 3 :
                 order.setItemName("Bottled Water");
                 order.setItemPrice(20000);
                 order.setItemQty(qty);
+                order.setItemImageId(R.drawable.drink_water);
                 break;
             case 4 :
                 order.setItemName("Mango Juice");
                 order.setItemPrice(30000);
                 order.setItemQty(qty);
+                order.setItemImageId(R.drawable.drink_mango_juice);
                 break;
         }
 
         cart.add(order);
-
-        Log.d("AFTER_ADD_ORDER", String.valueOf(cart.size()));
-
-        Log.d("ORDER", order.getItemName() + ' ' + order.getItemQty());
-        Toast.makeText(view.getContext(), String.valueOf(order.getItemQty()), Toast.LENGTH_SHORT).show();
 
         Intent i = new Intent(getApplication(), MenuActivity.class);
         i.putParcelableArrayListExtra("CART", cart);
