@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Activity.CartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.OrderActivity"
+            android:exported="true"
+            android:label="@string/title_activity_order"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
             android:name=".Activity.MenuActivity"
             android:exported="true" />
         <activity
